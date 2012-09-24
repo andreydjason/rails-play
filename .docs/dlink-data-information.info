@@ -1,0 +1,5 @@
+# URLs for D-Link 524 Network Router Web Configuration (192.168.0.1)
+# (URLs with my default configurations)
+
+# MAC Filters
+http://192.168.0.1/pmac.htm

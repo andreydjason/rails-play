@@ -1,0 +1,35 @@
+#--------------------------------------------------
+localhost_server: &localhost_server
+  username: rails_play
+  password: 2194
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # host: 127.0.0.1
+
+
+####################################################################
+
+
+#--------------------------------------------------
+default_server: &default_server
+  <<: *localhost_server
+
+
+####################################################################
+
+
+#--------------------------------------------------
+development:
+  <<: *default_server
+  database: rails_play_development
+
+#--------------------------------------------------
+test:
+  <<: *default_server
+  database: rails_play_test
+
+#--------------------------------------------------
+production:
+  <<: *default_server
+  database: rails_play_production

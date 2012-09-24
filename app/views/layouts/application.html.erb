@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-style-type" content="text/css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /> 
+        
+        <base href="http://rails_play.local/" />
+        
+        <title>Rails Play</title>
+        
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <%= stylesheet_link_tag "application", :media => "all" %>
+
+        <%= javascript_include_tag "application" %>
+
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div id="main-container" class="container">
+
+            <div class="content-container">
+                <h1>Hello, puto!</h1>
+            </div>
+
+            <hr>
+            
+            <%= yield %>
+
+            <hr>
+
+            <footer>
+                <p>Rails Play &copy; 2012</p>
+            </footer>
+
+        </div><!-- /container -->
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
