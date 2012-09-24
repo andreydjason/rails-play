@@ -2,11 +2,11 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery
 
-  before_filter :discover_router_module
+  before_filter :discover_router_model
 
 
   #------------------------------
-  def discover_router_module(options = {})
+  def discover_router_model(options = {})
   	@router_model = nil
 
   	@_i_discover_how_this_works = false
