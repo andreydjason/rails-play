@@ -21,13 +21,15 @@ RailsExceptionHandler.configure do |config|
   # You must remove public/500.html and public/404.html for these to have any effect
   config.responses = {
     :default => "<h1>500</h1><p>Internal server error</p>",
-    :not_found => "<h1>404</h1><p>Page not found</p>"
+    :not_found => "<h1>404</h1><p>Page not found</p>",
+    :wrong_token => "<h1>500</h1><p>There was a problem authenticating the submitted form. Reload the page and try again.</p>"
   }
 
   config.response_mapping = {                                             # All errors are mapped to the :default response unless overridden here
     'ActiveRecord::RecordNotFound' => :not_found,
     'ActionController::RoutingError' => :not_found,
-    'AbstractController::ActionNotFound' => :not_found
+    'AbstractController::ActionNotFound' => :not_found,
+    'ActionController::InvalidAuthenticityToken' => :wrong_token
   }
 
   config.storage_strategies = [:rails_log] # Available options: [:active_record, :rails_log, :remote_url => {:target => 'http://example.com'}]

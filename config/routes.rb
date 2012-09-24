@@ -10,7 +10,7 @@ RailsPlay::Application.routes.draw do
   ##################################################
 
   # Root
-  root :to => 'network_router#control_mac_filter'
+  root :to => 'network_router#control_mac_filters'
 
   ####################################################################################################
 
