@@ -1,4 +1,4 @@
-rails-play
+Rails Play
 ==========
 
-Rails Applications for playing with Ruby on Rails
+Web Applications for play and learn Ruby on Rails web framework
