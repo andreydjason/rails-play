@@ -21,9 +21,6 @@ module RailsPlay
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Custom Exceptions
-    config.exceptions_app = self.routes
-
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
@@ -63,6 +60,9 @@ module RailsPlay
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '0.0.1'
+
+    # Assets Paths
+    # config.assets.paths << Rails.root.join("vendor", "gems", "...")
   end
 end

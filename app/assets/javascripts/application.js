@@ -10,6 +10,4 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require dojo/dojo
-//= require ./base-functions-0
 //= require_tree .

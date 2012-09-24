@@ -19,6 +19,8 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 
+		<%= stylesheet_link_tag "application", :media => "all" %>
+
 		<script>
 		dojoConfig= {
 			has: {
@@ -26,11 +28,12 @@
 				"dojo-debug-messages": true
 			},
 			parseOnLoad: false,
-			async: true
+			async: true,
+			baseUrl: '/assets/javascripts'
 		};
 		</script>
 
-		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "dojo/dojo", :"data-dojo-config" => "async: true" %>
 
 		<%= javascript_include_tag "application" %>
 
