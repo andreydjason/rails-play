@@ -1,2 +1,2 @@
-class AwesomeError < StandartError
+class AwesomeError < StandardError
 end

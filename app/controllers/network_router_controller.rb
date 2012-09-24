@@ -14,7 +14,7 @@ class NetworkRouterController < ApplicationController
 			@option_mac_enable = 1
 			# @option_mac_disable_all = 2
 		else
-			raise StandartError, 'No other Router configured yet.'
+			raise StandardError, 'No other Router configured yet.'
 		end
 		
 		@
