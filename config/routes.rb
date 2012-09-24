@@ -1,5 +1,13 @@
 RailsPlay::Application.routes.draw do
 
+  resources :users
+
+  ##################################################
+
+  # Custom Error Pages
+  match "/404", :to => "http_errors#not_found"
+  match "/500", :to => "http_errors#server_error"
+
   ##################################################
 
   # DLink524 Network filter control

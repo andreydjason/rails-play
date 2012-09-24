@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :discover_router_module
 
 
+  #------------------------------
   def discover_router_module(options = {})
   	@router_model = nil
 
