@@ -2,7 +2,7 @@ class NetworkRouterController < ApplicationController
 
 	#------------------------------
 	# Interface to control router filters
-	def control_mac_filter
+	def control_mac_filters
 		case @router_model
 		when :DLink524 # Firmware version 2.07
 			# The 'options' are the same HTML element (<input type="RADIO" name="_EF">)

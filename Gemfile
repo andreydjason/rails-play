@@ -11,9 +11,12 @@ gem 'versionomy'
 gem 'thin'
 gem 'puma'
 
+# TODO: Implement Dojo
 gem 'dojo-rails'
 gem 'dojox-rails'
 gem 'dijit-rails'
+
+gem 'rails_exception_handler', "~> 2" # TODO => https://github.com/Sharagoz/rails_exception_handler
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
