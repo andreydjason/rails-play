@@ -8,6 +8,9 @@ gem 'pg'
 
 gem 'versionomy'
 
+gem 'thin'
+gem 'puma'
+
 gem 'dojo-rails'
 gem 'dojox-rails'
 gem 'dijit-rails'
