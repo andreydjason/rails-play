@@ -3,56 +3,69 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="content-style-type" content="text/css" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        
-        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /> 
-        
-        <base href="<%= current_full_domain_url %>" />
-        
-        <title>RailsPlay</title>
-        
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /> 
+		
+		<base href="<%= full_current_domain_url %>" />
+		
+		<title>RailsPlay</title>
+		
+		<meta name="keywords" content="">
+		<meta name="description" content="">
 
-        <%= stylesheet_link_tag "application", :media => "all" %>
+		<script>
+		dojoConfig= {
+			has: {
+				"dojo-firebug": true,
+				"dojo-debug-messages": true
+			},
+			parseOnLoad: false,
+			async: true
+		};
+		</script>
 
-        <%= javascript_include_tag "application" %>
+		<%= stylesheet_link_tag "application", :media => "all" %>
 
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
+		<%= javascript_include_tag "application" %>
 
-        <div id="main-container" class="container">
+		<%= csrf_meta_tags %>
 
-            <div class="content-container">
-                <h1>Welcome puto!</h1>
-            </div>
+	</head>
+	<body>
 
-            <hr>
-            
-            <%= yield %>
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+		<![endif]-->
 
-            <hr>
+		<div id="main-container" class="container">
 
-            <footer>
-                <p>RailsPlay &copy; 2012</p>
-            </footer>
+			<div class="content-container">
+				<h1>Welcome puto!</h1>
+			</div>
 
-        </div><!-- /container -->
+			<hr>
+			
+			<%= yield %>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+			<hr>
+
+			<footer>
+				<p>RailsPlay &copy; 2012</p>
+			</footer>
+
+		</div><!-- /container -->
+
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
 </html>

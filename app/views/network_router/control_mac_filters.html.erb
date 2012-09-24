@@ -1,3 +1,22 @@
+<script>
+require(["dojo/dom", "dojo/on", "dojo/parser", "dojo/ready", "dijit/registry", "dijit/form/Button"], function(dom, on, parser, ready, registry) {
+  var enableMACFilterClick = function(evt) {
+    console.log("enableMACFilterBtn clicked");
+  };
+
+  var disableMACFilterClick = function(evt) {
+    console.log("disableMACFilterBtn clicked");
+  };
+
+  ready(function(){
+    parser.parse();
+
+    on(registry.byId("enableMACFilterBtn"), "click", enableMACFilterClick);
+    on(registry.byId("disableMACFilterBtn"), "click", disableMACFilterClick);
+  });
+});
+</script>
+
 <div>
 	<h1>Control MAC Filters</h1>
 </div>
@@ -5,11 +24,11 @@
 <div class="">
 
     <div class="">
-        <h3><a class="btn btn-important" href="#">Enable MAC Filters</a></h3>
+    	<button id="enableMACFilterBtn" data-dojo-type="dijit/form/Button" type="button">Enable MAC Filters</button>
     </div>
 
     <div class="">
-        <h3><a class="btn btn-important" href="#">Disable MAC Filters</a></h3>
+    	<button id="disableMACFilterBtn" data-dojo-type="dijit/form/Button" type="button">Disable MAC Filters</button>
     </div>
     
 </div>
