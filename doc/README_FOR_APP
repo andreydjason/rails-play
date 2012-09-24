@@ -1,3 +1,3 @@
-### Rails Play
+### RailsPlay
 
-#1 (NetworkRouterController) An interface to enable and disable the MAC filters automaticaly by entering in the Dl-524 web configuration tool - entering a username and password - trought a web automation tool.
+# 1. (NetworkRouterController) An interface to enable and disable the MAC filters automaticaly by entering in the Dl-524 web configuration tool - entering a username and password - trought a web automation tool.
