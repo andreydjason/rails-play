@@ -7,17 +7,17 @@ class ApplicationController < ActionController::Base
 
   #------------------------------
   def discover_router_model(options = {})
-  	@router_model = nil
+    @router_model = nil
 
-  	@_i_discover_how_this_works = false
+    @_i_discover_how_this_works = false
 
-  	# I need to study how this works...
-  	case @_i_discover_how_this_works
-  	when true
-  		raise AwesomeError, "Awesome! Go programing now!"
-  	when false
-  		@router_model = :DLink524
-  	end
+    # I need to study how this works...
+    case @_i_discover_how_this_works
+    when true
+      raise AwesomeError, "Awesome! Go programing now!"
+    when false
+      @router_model = :DLink524
+    end
   end
 
 end
