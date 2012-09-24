@@ -6,6 +6,8 @@ gem 'trackman'
 
 gem 'pg'
 
+gem 'versionomy'
+
 gem 'dojo-rails'
 gem 'dojox-rails'
 gem 'dijit-rails'
