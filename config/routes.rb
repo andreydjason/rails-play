@@ -1,8 +1,16 @@
 RailsPlay::Application.routes.draw do
 
-  match '/roteador/filtros' => 'network_router#control_mac_filter'
+  ##################################################
 
+  # DLink524 Network filter control
+  match '/roteador/dlink524/filtros' => 'network_router#control_mac_filter'
+
+  ##################################################
+
+  # Root
   root :to => 'network_router#control_mac_filter'
+
+  ####################################################################################################
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
