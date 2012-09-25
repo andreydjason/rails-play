@@ -37,14 +37,20 @@
 		};
 		</script>
 
+		<!--//
+		Env: <%= Rails.env %> 
+		Controller: <%= controller.controller_name %>
+		Action: <%= controller.action_name %>
+		//-->
+
 		<%= javascript_include_tag "application" %>
 
 		<script>
-		// 0#000001
+		// APPHTML-0#000001
 		require(["dojo/i18n!dijit/form/nls/validate", "dojo/on", "dojo/ready", "dojo/json", "dojo/_base/config",
 			"dojo/parser", "dijit/registry", "dijit/form/Button", "dojo/domReady!"],
 		function(i18n, on, ready, JSON, config, parser, registry, button) {
-			console.log('0#000001'); //debug
+			console.info('APPHTML-0#000001'); //debug
 			ready(function() {
 				parser.parse();
 				var dialog = registry.byId("dialog");
@@ -55,7 +61,7 @@
 		</script>
 
 	</head>
-	<body class="soria">
+	<body class="soria" data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -63,22 +69,20 @@
 
 		<div id="main-container" class="container">
 
-			<div class="content-container">
-				<h1>Welcome puto!</h1>
-			</div>
-
-			<hr>
-			
 			<%= yield %>
 
-			<div data-dojo-type="dijit/Dialog" id="dialog" title="Foo!">
-			   <p>I am some content</p>
+			<div data-dojo-type="dijit/Dialog" id="dialog" title="Tip" class="align-center">
+			   <p>Enable the 'console' if you want to see the debug info.</p>
+			   <p></p>
+			   <p>PRESS ESC TO EXIT THIS DIALOG</p>
 			</div>
+
+			<br/>
 
 			<hr>
 
 			<footer>
-				<p>RailsPlay &copy; 2012</p>
+				<p><strong><em>RailsPlay</em></strong> &copy; 2012</p>
 			</footer>
 
 		</div><!-- /container -->

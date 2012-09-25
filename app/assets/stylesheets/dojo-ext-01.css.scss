@@ -1,0 +1,18 @@
+.soria {
+	.dijitButtonNode,
+	.dijitDialog,
+	.dijitTabContainerTop-tabs .dijitTabInnerDiv,
+	.dijitTabContainerTop-tabs .dijitTabContent  {
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+  }
+
+  .dijitDialog,
+  .dijitPopup {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.30);
+	}
+}
