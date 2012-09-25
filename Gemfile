@@ -27,6 +27,7 @@ end
 
 group :cucumber do
   gem 'capybara'
+  gem 'capybara-webkit'
   # gem 'capybara-mechanize'
   gem 'database_cleaner'
   gem 'cucumber-rails'
