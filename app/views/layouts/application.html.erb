@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="<%= I18n.locale %>" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="<%= I18n.locale %>" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="<%= I18n.locale %>" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="<%= I18n.locale %>" class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="content-style-type" content="text/css" />
@@ -12,7 +12,7 @@
 		
 		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /> 
 		
-		<base href="<%= full_current_domain_url %>" />
+		<!-- <base href="<%= full_current_domain_url %>" /> -->
 		
 		<title>RailsPlay</title>
 		
@@ -20,27 +20,42 @@
 		<meta name="description" content="">
 
 		<%= stylesheet_link_tag "application", :media => "all" %>
-
-		<script>
-		dojoConfig= {
-			has: {
-				"dojo-firebug": true,
-				"dojo-debug-messages": true
-			},
-			parseOnLoad: false,
-			async: true,
-			baseUrl: '/assets/javascripts'
-		};
-		</script>
-
-		<%= javascript_include_tag "dojo/dojo", :"data-dojo-config" => "async: true" %>
-
-		<%= javascript_include_tag "application" %>
+		<%= stylesheet_link_tag "dijit/themes/claro/claro", :media => "screen" %>
 
 		<%= csrf_meta_tags %>
 
+		<script>
+		var dojoConfig = {
+			has: {
+        "dojo-firebug": true,
+        "dojo-debug-messages": true
+      },
+			parseOnLoad: true,
+			async: true,
+			baseUrl: 'assets/dojo/',
+      cacheBust: true // Get "fresh" resources
+		};
+		</script>
+
+		<%= javascript_include_tag "application" %>
+
+		<script>
+		// 0#000001
+		require(["dojo/i18n!dijit/form/nls/validate", "dojo/on", "dojo/ready", "dojo/json", "dojo/_base/config",
+			"dojo/parser", "dijit/registry", "dijit/form/Button", "dojo/domReady!"],
+		function(i18n, on, ready, JSON, config, parser, registry, button) {
+			console.log('0#000001'); //debug
+			ready(function() {
+				parser.parse();
+				var dialog = registry.byId("dialog");
+				// dialog.set("content", "<pre>" + JSON.stringify(config, true) + "</pre>");
+				dialog.show();
+			});
+		});
+		</script>
+
 	</head>
-	<body>
+	<body class="claro">
 
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -56,6 +71,10 @@
 			
 			<%= yield %>
 
+			<div data-dojo-type="dijit/Dialog" id="dialog" title="Foo!">
+			   <p>I am some content</p>
+			</div>
+
 			<hr>
 
 			<footer>
@@ -64,11 +83,5 @@
 
 		</div><!-- /container -->
 
-		<script>
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
 	</body>
 </html>
