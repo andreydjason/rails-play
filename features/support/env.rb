@@ -6,7 +6,7 @@
 
 require 'cucumber/rails'
 require 'capybara/rails'
-# require 'capybara/cucumber'
+require 'capybara/cucumber'
 # require 'capybara/mechanize/cucumber'
 
 Capybara.javascript_driver = :webkit
