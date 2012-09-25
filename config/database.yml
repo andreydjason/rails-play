@@ -25,7 +25,7 @@ development:
   database: rails_play_development
 
 #--------------------------------------------------
-test:
+test: &test
   <<: *default_server
   database: rails_play_test
 
@@ -33,3 +33,6 @@ test:
 production:
   <<: *default_server
   database: rails_play_production
+
+cucumber:
+  <<: *test

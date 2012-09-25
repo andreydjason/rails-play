@@ -1,4 +1,4 @@
-RailsPlay
+RailsPlay [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/andreydjason/rails-play)
 ==========
 
 Web Applications for play and learn Ruby on Rails web framework
