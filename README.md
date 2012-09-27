@@ -11,5 +11,5 @@ Web Applications for play and learn Ruby on Rails web framework
 * PostgreSQL [ok]
 * Dojo Toolkit [ok]
 * Cucumber [ok]
-* Capybara [ok]
+* Capybara [ok ~ not sure]
 * Tiny/Medium/Big implementations to help development and deployment of the applications [continuous implementations/patchs]
