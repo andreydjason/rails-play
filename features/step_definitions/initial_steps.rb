@@ -7,7 +7,7 @@ After do
 end
 
 
-Given /^I Visit root_path$/ do
+Given /^I Visit Root Path$/ do
   visit('/')
 	click_button('enableMACFilterBtn')
 	current_path.should == root_path
