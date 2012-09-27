@@ -7,8 +7,16 @@ After do
 end
 
 
-When /I enter the website/ do
-	visit('/')
+Given /^I Visit root_path$/ do
+  visit('/')
 	click_button('enableMACFilterBtn')
 	current_path.should == root_path
+end
+
+When /^I donk know what to do$/ do
+  pending
+end
+
+Then /^I go to Google$/ do
+  pending
 end

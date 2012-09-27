@@ -3,6 +3,6 @@ Feature: Test Click Feature
   I want to run a quick Cucumber/Capybara test
 
   Scenario: Test Click Scenario
-    Given I Visit root_path
+    Given I Visit Root Path
     When I donk know what to do
     Then I go to Google
